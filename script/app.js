@@ -113,45 +113,10 @@ themes.forEach(function(theme){
 
 form.addEventListener("submit",function(event){
    event.preventDefault();
-   let nameVal = nameInput.value;
-   let emailVal = emailInput.value;
-   let messageVal = messageText.value;
-   if(nameVal === "" || emailVal === "" || messageVal === ""){
-       alert("عزیزم لطفا کادر هارو پر کن");
-   }else{
-      getComments(nameVal,emailVal,messageVal);
       submitBtn.value = "پیامت ارسال شد !!";
-      setTimeout(function(){
-      submitBtn.value = "بازم دلخواست حرف بزن";
-      },3000);
-      nameInput.value = "";
-      emailInput.value = "";
-      messageText.value = "";
    }
 });
 
-function getComments (nameVal,emailVal,messageVal) {
-  let newComment = {
-    id : commentsArray.length+1,
-    name : nameVal,
-    email : emailVal,
-    message : messageVal
-  }
-
-  commentsArray.push(newComment);
-  console.log(commentsArray);
-
-  setInLocal (commentsArray);
-  
-  if(commentsArray.length === 10){
-     commentsArray = [];
-   }
-   
-}
-
-function setInLocal (commentList) {
-  localStorage.setItem("comments",JSON.stringify(commentList));
-}
 
 
 
