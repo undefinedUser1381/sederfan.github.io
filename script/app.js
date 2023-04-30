@@ -21,9 +21,6 @@ const themeBoxBtn = $.querySelector(".theme-box__button");
 const themes = $.querySelectorAll(".themes");
 // Form Variables
 const form = $.querySelector(".message-box__form");
-const nameInput = $.querySelector("#name");
-const emailInput = $.querySelector("#email");
-const messageText = $.querySelector("#message");
 const submitBtn = $.querySelector("#submit-btn");
 
 let musics = [
