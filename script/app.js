@@ -108,10 +108,9 @@ themes.forEach(function(theme){
  });
 });
 
-form.addEventListener("submit",function(event){
-   event.preventDefault();
-      submitBtn.value = "پیامت ارسال شد !!";
-   }
+form.addEventListener("submit",function(e){
+   e.preventDefault();
+   submitBtn.value = "پیامت ارسال شد !!";
 });
 
 
