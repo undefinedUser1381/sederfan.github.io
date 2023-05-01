@@ -1,4 +1,6 @@
 const $ = document;
+// Header text 
+const headerText = $.querySelector(".header-content__text");
 // Menus Variables
 const navLinks = $.querySelector(".nav-links");
 const mobileMenu = $.querySelector(".mobile-menu");
@@ -112,6 +114,22 @@ form.addEventListener("submit",function(e){
    e.preventDefault();
    submitBtn.value = "پیامت ارسال شد !!";
 });
+
+// TypeWriter
+
+let textTypeWriter = new Typewriter(headerText,{
+    loop:true
+});
+
+textTypeWriter.typeString('سلام من عرفانم! به وبسایت من خوش اومدی')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('من وب دیزاینر هستم')
+    .pauseFor(2500)
+    .deleteChars(19)
+    .typeString('و همچنین برنامه نویس فرانت اند!')
+    .pauseFor(2500)
+    .start();
 
 
 
