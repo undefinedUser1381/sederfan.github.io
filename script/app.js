@@ -121,7 +121,7 @@ let textTypeWriter = new Typewriter(headerText,{
     loop:true
 });
 
-textTypeWriter.typeString('سلام من عرفانم! به وبسایت من خوش اومدی')
+textTypeWriter.typeString('سلام من عرفانم!')
     .pauseFor(2500)
     .deleteAll()
     .typeString('من وب دیزاینر هستم')
